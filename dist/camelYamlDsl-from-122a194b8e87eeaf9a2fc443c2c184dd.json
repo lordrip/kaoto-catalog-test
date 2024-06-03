@@ -1,0 +1,59 @@
+{
+  "type" : "object",
+  "additionalProperties" : false,
+  "$ref" : "#/definitions/org.apache.camel.dsl.yaml.deserializers.OutputAwareFromDefinition",
+  "properties" : {
+    "description" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "string"
+    },
+    "parameters" : {
+      "type" : "object"
+    },
+    "steps" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/org.apache.camel.model.ProcessorDefinition"
+      }
+    },
+    "uri" : {
+      "type" : "string"
+    },
+    "variableReceive" : {
+      "type" : "string"
+    }
+  },
+  "required" : [ "steps", "uri" ],
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "definitions" : {
+    "org.apache.camel.dsl.yaml.deserializers.OutputAwareFromDefinition" : {
+      "type" : "object",
+      "properties" : {
+        "description" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "parameters" : {
+          "type" : "object"
+        },
+        "steps" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/org.apache.camel.model.ProcessorDefinition"
+          }
+        },
+        "uri" : {
+          "type" : "string"
+        },
+        "variableReceive" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "steps", "uri" ]
+    }
+  }
+}
