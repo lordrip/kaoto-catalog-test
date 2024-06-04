@@ -16,19 +16,19 @@
       "name" : "entities",
       "description" : "Aggregated Camel catalog for entities",
       "version" : "4.6.0",
-      "file" : "camel-catalog-aggregate-entities-d6ac167ea5efcb37874e2aa7eb625983.json"
+      "file" : "camel-catalog-aggregate-entities-89af2b28e451c0e6201735677f1d0b66.json"
     },
     "kameletBoundaries" : {
       "name" : "kameletBoundaries",
-      "description" : "Kamelet definitions of category 'boundaries' in JSON",
-      "version" : "4.4.1",
-      "file" : "kamelet-boundaries-2f7c0f8caa0d802972884950f9c37d79.json"
+      "description" : "Aggregated Kamelet boundaries in JSON",
+      "version" : "4.6.0",
+      "file" : "kamelet-boundaries-9883bcb6b6ea05fd035b3407818d65a8.json"
     },
     "kamelets" : {
       "name" : "kamelets",
-      "description" : "Aggregated Kamelet definitions in JSON",
-      "version" : "4.4.1",
-      "file" : "kamelets-aggregate-52030ffffc68bdb3e4ec21ce6ae79f49.json"
+      "description" : "Aggregated Kamelets in JSON",
+      "version" : "4.6.0",
+      "file" : "kamelets-aggregate-62706a1150b860e00d8c033ddb30fa66.json"
     },
     "languages" : {
       "name" : "languages",
@@ -52,7 +52,7 @@
       "name" : "patterns",
       "description" : "Aggregated Camel catalog for patterns",
       "version" : "4.6.0",
-      "file" : "camel-catalog-aggregate-patterns-46e39d7db1727899d66c0d3f0b580268.json"
+      "file" : "camel-catalog-aggregate-patterns-7f3f094c7116aa70b5e091bfc8ac39d0.json"
     }
   },
   "schemas" : {
@@ -60,25 +60,25 @@
       "name" : "Integration",
       "description" : "Integration",
       "version" : "2.3.1",
-      "file" : "crd-schema-integrations-de43dd78321dddf82a16ab09ae3cae77.json"
+      "file" : "crd-schema-integration-de43dd78321dddf82a16ab09ae3cae77.json"
     },
     "Kamelet" : {
       "name" : "Kamelet",
       "description" : "Kamelet",
       "version" : "2.3.1",
-      "file" : "crd-schema-kamelets-eccbf305027fc05d42a371c667bb25c8.json"
+      "file" : "crd-schema-kamelet-eccbf305027fc05d42a371c667bb25c8.json"
     },
     "KameletBinding" : {
       "name" : "KameletBinding",
       "description" : "KameletBinding",
       "version" : "2.3.1",
-      "file" : "crd-schema-kameletbindings-7334fb4e5567aa656c21a323cf47cfb1.json"
+      "file" : "crd-schema-kameletbinding-7334fb4e5567aa656c21a323cf47cfb1.json"
     },
     "KameletConfiguration" : {
       "name" : "KameletConfiguration",
-      "description" : "Camel K Pipe ErrorHandler JSON schema",
+      "description" : "Schema for Kamelet configuration",
       "version" : "1",
-      "file" : "KameletConfiguration-890495b48b52242b2dd5ee187b875462.json"
+      "file" : "KameletConfiguration-8a7d32d6fd6a7e9d956eba375087f8f8.json"
     },
     "ObjectMeta" : {
       "name" : "ObjectMeta",
@@ -96,19 +96,19 @@
       "name" : "Pipe",
       "description" : "Pipe",
       "version" : "2.3.1",
-      "file" : "crd-schema-pipes-a3c7c1fce69a636a15ecaaa093128a09.json"
+      "file" : "crd-schema-pipe-a3c7c1fce69a636a15ecaaa093128a09.json"
     },
     "PipeConfiguration" : {
       "name" : "PipeConfiguration",
-      "description" : "Camel K Pipe ErrorHandler JSON schema",
+      "description" : "Schema for Pipe configuration",
       "version" : "1",
-      "file" : "PipeConfiguration-b25e91ab14b0f3633b5a158495f6a5cf.json"
+      "file" : "PipeConfiguration-9a8b1b71bced9e753d144104cb93f005.json"
     },
     "PipeErrorHandler" : {
       "name" : "PipeErrorHandler",
-      "description" : "Camel K Pipe ErrorHandler JSON schema",
+      "description" : "Camel K Pipe ErrorHandler. See https://camel.apache.org/camel-k/latest/pipe-step.html#_error_handler for more details.",
       "version" : "1",
-      "file" : "PipeErrorHandler-ea6d403a74dbe607b4f064b65433179a.json"
+      "file" : "PipeErrorHandler-e89233d66ea68cfd05cd3a5179716ad5.json"
     },
     "beans" : {
       "name" : "beans",

@@ -709,7 +709,7 @@
           "description" : "Indicates to wait to complete all current and partial (pending) aggregated exchanges when the context is stopped. This also means that we will wait for all pending exchanges which are stored in the aggregation repository to complete so the repository is empty before we can stop. You may want to enable this when using the memory based aggregation repository that is memory based only, and do not store data on disk. When this option is enabled, then the aggregator is waiting to complete all those exchanges before its stopped, when stopping CamelContext or the route using it."
         }
       },
-      "required" : [ "aggregationStrategy" ],
+      "required" : [ "correlationExpression" ],
       "$comment" : "steps",
       "definitions" : {
         "org.apache.camel.model.OptimisticLockRetryPolicyDefinition" : {
@@ -905,7 +905,8 @@
         }
       },
       "title" : "Bean",
-      "description" : "Calls a Java bean"
+      "description" : "Calls a Java bean",
+      "required" : [ ]
     }
   },
   "doCatch" : {
@@ -1103,7 +1104,8 @@
               "description" : "Whether to disable this EIP from the route during build time. Once an EIP has been disabled then it cannot be enabled later at runtime."
             }
           },
-          "$comment" : "expression,steps"
+          "$comment" : "expression,steps",
+          "required" : [ ]
         },
         "org.apache.camel.model.language.ExpressionDefinition" : {
           "type" : "object",
@@ -2093,7 +2095,8 @@
           },
           "required" : [ "key", "value" ]
         }
-      }
+      },
+      "required" : [ ]
     }
   },
   "choice" : {
@@ -2223,7 +2226,8 @@
           "title" : "Precondition",
           "description" : "Indicates whether this Choice EIP is in precondition mode or not. If so its branches (when/otherwise) are evaluated during startup to keep at runtime only the branch that matched."
         }
-      }
+      },
+      "required" : [ ]
     }
   },
   "circuitBreaker" : {
@@ -2570,7 +2574,8 @@
               "description" : "Whether the fallback goes over the network. If the fallback will go over the network it is another possible point of failure. It is important to execute the fallback command on a separate thread-pool, otherwise if the main command were to become latent and fill the thread-pool this would prevent the fallback from running if the two commands share the same pool."
             }
           },
-          "$comment" : "steps"
+          "$comment" : "steps",
+          "required" : [ ]
         },
         "org.apache.camel.model.Resilience4jConfigurationDefinition" : {
           "title" : "Resilience4j Configuration",
@@ -2713,7 +2718,8 @@
             }
           }
         }
-      }
+      },
+      "required" : [ ]
     }
   },
   "claimCheck" : {
@@ -2889,7 +2895,8 @@
           "title" : "Aggregation Strategy Method Name",
           "description" : "This option can be used to explicit declare the method name to use, when using POJOs as the AggregationStrategy."
         }
-      }
+      },
+      "required" : [ ]
     }
   },
   "convertBodyTo" : {
@@ -3027,7 +3034,8 @@
         }
       },
       "title" : "Convert Body To",
-      "description" : "Converts the message body to another type"
+      "description" : "Converts the message body to another type",
+      "required" : [ "type" ]
     }
   },
   "convertHeaderTo" : {
@@ -3533,7 +3541,8 @@
           "$comment" : "class:java.util.concurrent.ExecutorService"
         }
       },
-      "$comment" : "expression"
+      "$comment" : "expression",
+      "required" : [ ]
     }
   },
   "dynamicRouter" : {
@@ -3688,7 +3697,8 @@
           "description" : "Sets the maximum size used by the org.apache.camel.spi.ProducerCache which is used to cache and reuse producers when using this dynamic router, when uris are reused. Beware that when using dynamic endpoints then it affects how well the cache can be utilized. If each dynamic endpoint is unique then its best to turn off caching by setting this to -1, which allows Camel to not cache both the producers and endpoints; they are regarded as prototype scoped and will be stopped and discarded after use. This reduces memory usage as otherwise producers/endpoints are stored in memory in the caches. However if there are a high degree of dynamic endpoints that have been used before, then it can benefit to use the cache to reuse both producers and endpoints and therefore the cache size can be set accordingly or rely on the default size (1000). If there is a mix of unique and used before dynamic endpoints, then setting a reasonable cache size can help reduce memory usage to avoid storing too many non frequent used producers."
         }
       },
-      "$comment" : "expression"
+      "$comment" : "expression",
+      "required" : [ ]
     }
   },
   "enrich" : {
@@ -4010,7 +4020,8 @@
           "description" : "Whether to auto startup components when enricher is starting up."
         }
       },
-      "$comment" : "expression"
+      "$comment" : "expression",
+      "required" : [ ]
     }
   },
   "filter" : {
@@ -4139,7 +4150,8 @@
           "description" : "Name of exchange property to use for storing the status of the filtering. Setting this allows to know if the filter predicate evaluated as true or false."
         }
       },
-      "$comment" : "expression,steps"
+      "$comment" : "expression,steps",
+      "required" : [ ]
     }
   },
   "doFinally" : {
@@ -4272,7 +4284,8 @@
           "description" : "Whether to disable this EIP from the route during build time. Once an EIP has been disabled then it cannot be enabled later at runtime."
         }
       },
-      "$comment" : "steps"
+      "$comment" : "steps",
+      "required" : [ ]
     }
   },
   "idempotentConsumer" : {
@@ -4494,7 +4507,7 @@
           "description" : "Sets whether to remove or keep the key on failure. The default behavior is to remove the key on failure."
         }
       },
-      "required" : [ "idempotentRepository" ],
+      "required" : [ ],
       "$comment" : "expression,steps"
     }
   },
@@ -4623,7 +4636,8 @@
           "description" : "Sets whether or not to inherit the configured error handler. The default value is true. You can use this to disable using the inherited error handler for a given DSL such as a load balancer where you want to use a custom error handler strategy."
         }
       },
-      "$comment" : "loadbalance,steps"
+      "$comment" : "loadbalance,steps",
+      "required" : [ ]
     }
   },
   "log" : {
@@ -4801,7 +4815,8 @@
         }
       },
       "title" : "Logger",
-      "description" : "Used for printing custom messages to the logger."
+      "description" : "Used for printing custom messages to the logger.",
+      "required" : [ "message" ]
     }
   },
   "loop" : {
@@ -4996,7 +5011,8 @@
           "description" : "If the breakOnShutdown attribute is true, then the loop will not iterate until it reaches the end when Camel is shut down."
         }
       },
-      "$comment" : "expression,steps"
+      "$comment" : "expression,steps",
+      "required" : [ ]
     }
   },
   "marshal" : {
@@ -5128,7 +5144,8 @@
           "description" : "To use a variable to store the received message body (only body, not headers). This is handy for easy access to the received message body via variables. Important: When using receive variable then the received body is stored only in this variable and not on the current org.apache.camel.Message ."
         }
       },
-      "$comment" : "dataformat"
+      "$comment" : "dataformat",
+      "required" : [ ]
     }
   },
   "multicast" : {
@@ -5497,7 +5514,8 @@
           "description" : "Shares the org.apache.camel.spi.UnitOfWork with the parent and each of the sub messages. Multicast will by default not share unit of work between the parent exchange and each multicasted exchange. This means each sub exchange has its own individual unit of work."
         }
       },
-      "$comment" : "steps"
+      "$comment" : "steps",
+      "required" : [ ]
     }
   },
   "onFallback" : {
@@ -5612,7 +5630,8 @@
           "description" : "Whether the fallback goes over the network. If the fallback will go over the network it is another possible point of failure. It is important to execute the fallback command on a separate thread-pool, otherwise if the main command were to become latent and fill the thread-pool this would prevent the fallback from running if the two commands share the same pool."
         }
       },
-      "$comment" : "steps"
+      "$comment" : "steps",
+      "required" : [ ]
     }
   },
   "otherwise" : {
@@ -5707,7 +5726,8 @@
           "description" : "Whether to disable this EIP from the route during build time. Once an EIP has been disabled then it cannot be enabled later at runtime."
         }
       },
-      "$comment" : "steps"
+      "$comment" : "steps",
+      "required" : [ ]
     }
   },
   "pausable" : {
@@ -5922,7 +5942,8 @@
           "description" : "Whether to disable this EIP from the route during build time. Once an EIP has been disabled then it cannot be enabled later at runtime."
         }
       },
-      "$comment" : "steps"
+      "$comment" : "steps",
+      "required" : [ ]
     }
   },
   "policy" : {
@@ -6307,7 +6328,8 @@
           "description" : "Whether to auto startup components when poll enricher is starting up."
         }
       },
-      "$comment" : "expression"
+      "$comment" : "expression",
+      "required" : [ ]
     }
   },
   "process" : {
@@ -6824,7 +6846,8 @@
           "description" : "Shares the org.apache.camel.spi.UnitOfWork with the parent and each of the sub messages. Recipient List will by default not share unit of work between the parent exchange and each recipient exchange. This means each sub exchange has its own individual unit of work."
         }
       },
-      "$comment" : "expression"
+      "$comment" : "expression",
+      "required" : [ ]
     }
   },
   "removeHeader" : {
@@ -6923,7 +6946,8 @@
         }
       },
       "title" : "Remove Header",
-      "description" : "Removes a named header from the message"
+      "description" : "Removes a named header from the message",
+      "required" : [ "name" ]
     }
   },
   "removeHeaders" : {
@@ -7041,7 +7065,8 @@
         }
       },
       "title" : "Remove Headers",
-      "description" : "Removes message headers whose name matches a specified pattern"
+      "description" : "Removes message headers whose name matches a specified pattern",
+      "required" : [ "pattern" ]
     }
   },
   "removeProperties" : {
@@ -7159,7 +7184,8 @@
         }
       },
       "title" : "Remove Properties",
-      "description" : "Removes message exchange properties whose name matches a specified pattern"
+      "description" : "Removes message exchange properties whose name matches a specified pattern",
+      "required" : [ "pattern" ]
     }
   },
   "removeProperty" : {
@@ -7258,7 +7284,8 @@
         }
       },
       "title" : "Remove Property",
-      "description" : "Removes a named property from the message exchange"
+      "description" : "Removes a named property from the message exchange",
+      "required" : [ "name" ]
     }
   },
   "removeVariable" : {
@@ -7357,7 +7384,8 @@
         }
       },
       "title" : "Remove Variable",
-      "description" : "Removes a named variable"
+      "description" : "Removes a named variable",
+      "required" : [ "name" ]
     }
   },
   "resequence" : {
@@ -7480,7 +7508,8 @@
           "description" : "Whether to disable this EIP from the route during build time. Once an EIP has been disabled then it cannot be enabled later at runtime."
         }
       },
-      "$comment" : "expression,steps"
+      "$comment" : "expression,steps",
+      "required" : [ ]
     }
   },
   "resumable" : {
@@ -7760,7 +7789,8 @@
         }
       },
       "title" : "Rollback",
-      "description" : "Forces a rollback by stopping routing the message"
+      "description" : "Forces a rollback by stopping routing the message",
+      "required" : [ ]
     }
   },
   "routingSlip" : {
@@ -7941,7 +7971,8 @@
       },
       "title" : "Routing Slip",
       "description" : "Routes a message through a series of steps that are pre-determined (the slip)",
-      "$comment" : "expression"
+      "$comment" : "expression",
+      "required" : [ ]
     }
   },
   "saga" : {
@@ -8227,7 +8258,8 @@
           "type" : "object",
           "properties" : { }
         }
-      }
+      },
+      "required" : [ ]
     }
   },
   "sample" : {
@@ -8346,7 +8378,8 @@
         }
       },
       "title" : "Sample",
-      "description" : "Extract a sample of the messages passing through a route"
+      "description" : "Extract a sample of the messages passing through a route",
+      "required" : [ ]
     }
   },
   "script" : {
@@ -8442,7 +8475,8 @@
           "description" : "Whether to disable this EIP from the route during build time. Once an EIP has been disabled then it cannot be enabled later at runtime."
         }
       },
-      "$comment" : "expression"
+      "$comment" : "expression",
+      "required" : [ ]
     }
   },
   "setBody" : {
@@ -8538,7 +8572,8 @@
           "description" : "Whether to disable this EIP from the route during build time. Once an EIP has been disabled then it cannot be enabled later at runtime."
         }
       },
-      "$comment" : "expression"
+      "$comment" : "expression",
+      "required" : [ ]
     }
   },
   "setExchangePattern" : {
@@ -8639,7 +8674,8 @@
         }
       },
       "title" : "Set Exchange Pattern",
-      "description" : "Sets the exchange pattern on the message exchange"
+      "description" : "Sets the exchange pattern on the message exchange",
+      "required" : [ "pattern" ]
     }
   },
   "setHeader" : {
@@ -8875,7 +8911,8 @@
           "required" : [ "name" ],
           "$comment" : "expression"
         }
-      }
+      },
+      "required" : [ ]
     }
   },
   "setProperty" : {
@@ -9226,7 +9263,8 @@
           "required" : [ "name" ],
           "$comment" : "expression"
         }
-      }
+      },
+      "required" : [ ]
     }
   },
   "sort" : {
@@ -9342,7 +9380,8 @@
           "$comment" : "class:java.util.Comparator"
         }
       },
-      "$comment" : "expression"
+      "$comment" : "expression",
+      "required" : [ ]
     }
   },
   "split" : {
@@ -9745,7 +9784,8 @@
           "description" : "Shares the org.apache.camel.spi.UnitOfWork with the parent and each of the sub messages. Splitter will by default not share unit of work between the parent exchange and each split exchange. This means each split exchange has its own individual unit of work."
         }
       },
-      "$comment" : "expression,steps"
+      "$comment" : "expression,steps",
+      "required" : [ ]
     }
   },
   "step" : {
@@ -9854,7 +9894,8 @@
           "description" : "Whether to disable this EIP from the route during build time. Once an EIP has been disabled then it cannot be enabled later at runtime."
         }
       },
-      "$comment" : "steps"
+      "$comment" : "steps",
+      "required" : [ ]
     }
   },
   "stop" : {
@@ -9935,7 +9976,8 @@
           "title" : "Disabled",
           "description" : "Whether to disable this EIP from the route during build time. Once an EIP has been disabled then it cannot be enabled later at runtime."
         }
-      }
+      },
+      "required" : [ ]
     }
   },
   "threads" : {
@@ -10211,7 +10253,8 @@
           "description" : "Whether or not to use as caller runs as fallback when a task is rejected being added to the thread pool (when its full). This is only used as fallback if no rejectedPolicy has been configured, or the thread pool has no configured rejection handler. Is by default true",
           "default" : "true"
         }
-      }
+      },
+      "required" : [ ]
     }
   },
   "throttle" : {
@@ -10449,7 +10492,8 @@
           "default" : "1000"
         }
       },
-      "$comment" : "expression"
+      "$comment" : "expression",
+      "required" : [ ]
     }
   },
   "throwException" : {
@@ -10585,7 +10629,8 @@
           "title" : "Ref",
           "description" : "Reference to the exception instance to lookup from the registry to throw"
         }
-      }
+      },
+      "required" : [ ]
     }
   },
   "to" : {
@@ -10750,7 +10795,8 @@
         }
       },
       "title" : "To",
-      "description" : "Sends the message to a static endpoint"
+      "description" : "Sends the message to a static endpoint",
+      "required" : [ ]
     }
   },
   "toD" : {
@@ -11004,7 +11050,8 @@
         }
       },
       "title" : "To D",
-      "description" : "Sends the message to a dynamic endpoint"
+      "description" : "Sends the message to a dynamic endpoint",
+      "required" : [ "uri" ]
     }
   },
   "transacted" : {
@@ -11104,7 +11151,8 @@
           "description" : "Sets a reference to use for lookup the policy in the registry."
         }
       },
-      "$comment" : "steps"
+      "$comment" : "steps",
+      "required" : [ ]
     }
   },
   "transform" : {
@@ -11236,7 +11284,8 @@
           "description" : "To type used as a target data type in the transformation."
         }
       },
-      "$comment" : "expression"
+      "$comment" : "expression",
+      "required" : [ ]
     }
   },
   "doTry" : {
@@ -11331,7 +11380,8 @@
           "description" : "Whether to disable this EIP from the route during build time. Once an EIP has been disabled then it cannot be enabled later at runtime."
         }
       },
-      "$comment" : "steps"
+      "$comment" : "steps",
+      "required" : [ ]
     }
   },
   "unmarshal" : {
@@ -11483,7 +11533,8 @@
           "description" : "Indicates whether null is allowed as value of a body to unmarshall."
         }
       },
-      "$comment" : "dataformat"
+      "$comment" : "dataformat",
+      "required" : [ ]
     }
   },
   "validate" : {
@@ -11600,7 +11651,8 @@
           "$comment" : "class:org.apache.camel.spi.PredicateExceptionFactory"
         }
       },
-      "$comment" : "expression"
+      "$comment" : "expression",
+      "required" : [ ]
     }
   },
   "when" : {
@@ -11710,7 +11762,8 @@
           "description" : "Whether to disable this EIP from the route during build time. Once an EIP has been disabled then it cannot be enabled later at runtime."
         }
       },
-      "$comment" : "expression,steps"
+      "$comment" : "expression,steps",
+      "required" : [ ]
     }
   },
   "whenSkipSendToEndpoint" : {
@@ -11820,7 +11873,8 @@
           "description" : "Whether to disable this EIP from the route during build time. Once an EIP has been disabled then it cannot be enabled later at runtime."
         }
       },
-      "$comment" : "expression,steps"
+      "$comment" : "expression,steps",
+      "required" : [ ]
     }
   },
   "wireTap" : {
@@ -12145,7 +12199,7 @@
           "description" : "Whether to auto startup components when toD is starting up."
         }
       },
-      "required" : [ "uri" ]
+      "required" : [ ]
     }
   },
   "serviceCall" : {
@@ -12465,7 +12519,8 @@
         }
       },
       "title" : "Service Call",
-      "description" : "To call remote services"
+      "description" : "To call remote services",
+      "required" : [ "name" ]
     }
   },
   "intercept" : {
@@ -12560,7 +12615,8 @@
           "description" : "Whether to disable this EIP from the route during build time. Once an EIP has been disabled then it cannot be enabled later at runtime."
         }
       },
-      "$comment" : "steps"
+      "$comment" : "steps",
+      "required" : [ ]
     }
   },
   "interceptFrom" : {
@@ -12687,7 +12743,8 @@
       },
       "title" : "Intercept From",
       "description" : "Intercepts incoming messages",
-      "$comment" : "steps"
+      "$comment" : "steps",
+      "required" : [ ]
     }
   },
   "interceptSendToEndpoint" : {
@@ -12851,7 +12908,8 @@
       },
       "title" : "Intercept Send To Endpoint",
       "description" : "Intercepts messages being sent to an endpoint",
-      "$comment" : "steps"
+      "$comment" : "steps",
+      "required" : [ "uri" ]
     }
   },
   "onException" : {
@@ -13230,7 +13288,8 @@
               "description" : "Whether to disable this EIP from the route during build time. Once an EIP has been disabled then it cannot be enabled later at runtime."
             }
           },
-          "$comment" : "expression,steps"
+          "$comment" : "expression,steps",
+          "required" : [ ]
         },
         "org.apache.camel.model.RedeliveryPolicyDefinition" : {
           "title" : "Redelivery Policy",
@@ -13374,7 +13433,8 @@
             }
           }
         }
-      }
+      },
+      "required" : [ "exception" ]
     }
   },
   "onCompletion" : {
@@ -13648,9 +13708,11 @@
               "description" : "Whether to disable this EIP from the route during build time. Once an EIP has been disabled then it cannot be enabled later at runtime."
             }
           },
-          "$comment" : "expression,steps"
+          "$comment" : "expression,steps",
+          "required" : [ ]
         }
-      }
+      },
+      "required" : [ ]
     }
   }
 }

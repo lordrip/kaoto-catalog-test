@@ -2,6 +2,7 @@
   "$schema" : "http://json-schema.org/draft-07/schema#",
   "type" : "object",
   "additionalProperties" : false,
+  "title": "Pipe Error Handler",
   "description": "Camel K Pipe ErrorHandler. See https://camel.apache.org/camel-k/latest/pipe-step.html#_error_handler for more details.",
   "oneOf" : [ {
     "title": "No Pipe ErrorHandler",

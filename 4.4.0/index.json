@@ -18,17 +18,17 @@
       "version" : "4.4.0",
       "file" : "camel-catalog-aggregate-entities-da52c2fd4fbef25845f46a99f7305cad.json"
     },
+    "kameletBoundaries" : {
+      "name" : "kameletBoundaries",
+      "description" : "Aggregated Kamelet boundaries in JSON",
+      "version" : "4.4.0",
+      "file" : "kamelet-boundaries-9883bcb6b6ea05fd035b3407818d65a8.json"
+    },
     "kamelets" : {
       "name" : "kamelets",
       "description" : "Aggregated Kamelets in JSON",
       "version" : "4.4.0",
       "file" : "kamelets-aggregate-7580460427acc01aa0e7963569fd2c03.json"
-    },
-    "kameletsBoundaries" : {
-      "name" : "kameletsBoundaries",
-      "description" : "Aggregated Kamelet boundaries in JSON",
-      "version" : "4.4.0",
-      "file" : "kamelets-boundaries-9883bcb6b6ea05fd035b3407818d65a8.json"
     },
     "languages" : {
       "name" : "languages",

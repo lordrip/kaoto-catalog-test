@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties": false,
+  "title": "Kamelet configuration",
   "description": "Schema for Kamelet configuration",
   "properties": {
     "name": {

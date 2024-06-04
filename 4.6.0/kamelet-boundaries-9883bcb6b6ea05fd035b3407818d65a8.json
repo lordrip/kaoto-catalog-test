@@ -20,7 +20,7 @@
       "definition" : {
         "title" : "Kamelet Sink",
         "description" : "All source kamelets must end with this sink step.",
-        "required" : [ ],
+        "required" : null,
         "type" : "object",
         "properties" : { }
       },
@@ -28,7 +28,7 @@
       "template" : {
         "from" : {
           "uri" : "kamelet:sink",
-          "steps" : [ ]
+          "steps" : null
         }
       }
     },
@@ -37,7 +37,7 @@
       "type" : "object",
       "title" : "Kamelet Sink",
       "description" : "All source kamelets must end with this sink step.",
-      "required" : [ ]
+      "required" : null
     }
   },
   "source" : {
@@ -61,7 +61,7 @@
       "definition" : {
         "title" : "Kamelet Source",
         "description" : "All sink kamelets must start with this source step.",
-        "required" : [ ],
+        "required" : null,
         "type" : "object",
         "properties" : { }
       },
@@ -69,7 +69,7 @@
       "template" : {
         "from" : {
           "uri" : "kamelet:source",
-          "steps" : [ ]
+          "steps" : null
         }
       }
     },
@@ -78,7 +78,7 @@
       "type" : "object",
       "title" : "Kamelet Source",
       "description" : "All sink kamelets must start with this source step.",
-      "required" : [ ]
+      "required" : null
     }
   }
 }
