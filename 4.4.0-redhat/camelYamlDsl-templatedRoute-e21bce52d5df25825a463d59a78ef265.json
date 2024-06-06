@@ -1,0 +1,97 @@
+{
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "beans" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/org.apache.camel.model.TemplatedRouteBeanDefinition"
+      }
+    },
+    "parameters" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/org.apache.camel.model.TemplatedRouteParameterDefinition"
+      }
+    },
+    "prefixId" : {
+      "type" : "string"
+    },
+    "routeId" : {
+      "type" : "string"
+    },
+    "routeTemplateRef" : {
+      "type" : "string"
+    }
+  },
+  "required" : [ "routeTemplateRef" ],
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "definitions" : {
+    "org.apache.camel.model.TemplatedRouteBeanDefinition" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "properties" : {
+          "type" : "object"
+        },
+        "property" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/org.apache.camel.model.PropertyDefinition"
+          }
+        },
+        "script" : {
+          "type" : "string"
+        },
+        "scriptLanguage" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "name", "type" ]
+    },
+    "org.apache.camel.model.TemplatedRouteParameterDefinition" : {
+      "title" : "Templated Route Parameter",
+      "description" : "An input parameter of a route template.",
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "name" : {
+          "type" : "string",
+          "title" : "Name",
+          "description" : "The name of the parameter"
+        },
+        "value" : {
+          "type" : "string",
+          "title" : "Value",
+          "description" : "The value of the parameter."
+        }
+      },
+      "required" : [ "name", "value" ]
+    },
+    "org.apache.camel.model.PropertyDefinition" : {
+      "title" : "Property",
+      "description" : "A key value pair where the value is a literal value",
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "key" : {
+          "type" : "string",
+          "title" : "Key",
+          "description" : "The name of the property"
+        },
+        "value" : {
+          "type" : "string",
+          "title" : "Value",
+          "description" : "The property value."
+        }
+      },
+      "required" : [ "key", "value" ]
+    }
+  }
+}
