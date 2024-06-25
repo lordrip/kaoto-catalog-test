@@ -1,0 +1,207 @@
+{
+  "name" : "Camel SpringBoot 4.6.0",
+  "version" : "4.6.0",
+  "runtime" : "SpringBoot",
+  "catalogs" : {
+    "components" : {
+      "name" : "components",
+      "description" : "Aggregated Camel catalog for components",
+      "version" : "4.6.0",
+      "file" : "camel-catalog-aggregate-components-32e2ecfcfca9642e55681a2a84c1afa7.json"
+    },
+    "dataformats" : {
+      "name" : "dataformats",
+      "description" : "Aggregated Camel catalog for dataformats",
+      "version" : "4.6.0",
+      "file" : "camel-catalog-aggregate-dataformats-bbc646760955df7c146e139f63e72ff7.json"
+    },
+    "entities" : {
+      "name" : "entities",
+      "description" : "Aggregated Camel catalog for entities",
+      "version" : "4.6.0",
+      "file" : "camel-catalog-aggregate-entities-89af2b28e451c0e6201735677f1d0b66.json"
+    },
+    "kameletBoundaries" : {
+      "name" : "kameletBoundaries",
+      "description" : "Aggregated Kamelet boundaries in JSON",
+      "version" : "4.6.0",
+      "file" : "kamelet-boundaries-9883bcb6b6ea05fd035b3407818d65a8.json"
+    },
+    "kamelets" : {
+      "name" : "kamelets",
+      "description" : "Aggregated Kamelets in JSON",
+      "version" : "4.6.0",
+      "file" : "kamelets-aggregate-38502362e01eaec2e8fb02872240f68c.json"
+    },
+    "languages" : {
+      "name" : "languages",
+      "description" : "Aggregated Camel catalog for languages",
+      "version" : "4.6.0",
+      "file" : "camel-catalog-aggregate-languages-9c5b7b7b1a0d5e73fb0a060a2410e664.json"
+    },
+    "loadbalancers" : {
+      "name" : "loadbalancers",
+      "description" : "Aggregated Camel catalog for loadbalancers",
+      "version" : "4.6.0",
+      "file" : "camel-catalog-aggregate-loadbalancers-5cb80a4498e3f825fc76a0741fe13064.json"
+    },
+    "models" : {
+      "name" : "models",
+      "description" : "Aggregated Camel catalog for models",
+      "version" : "4.6.0",
+      "file" : "camel-catalog-aggregate-models-1b9f6a7f2140ea78b75fab227879e2f1.json"
+    },
+    "patterns" : {
+      "name" : "patterns",
+      "description" : "Aggregated Camel catalog for patterns",
+      "version" : "4.6.0",
+      "file" : "camel-catalog-aggregate-patterns-38a3ef17e5fcfbf51f1c724204491557.json"
+    }
+  },
+  "schemas" : {
+    "Integration" : {
+      "name" : "Integration",
+      "description" : "Integration",
+      "version" : "2.3.1",
+      "file" : "crd-schema-integration-de43dd78321dddf82a16ab09ae3cae77.json"
+    },
+    "Kamelet" : {
+      "name" : "Kamelet",
+      "description" : "Kamelet",
+      "version" : "2.3.1",
+      "file" : "crd-schema-kamelet-eccbf305027fc05d42a371c667bb25c8.json"
+    },
+    "KameletBinding" : {
+      "name" : "KameletBinding",
+      "description" : "KameletBinding",
+      "version" : "2.3.1",
+      "file" : "crd-schema-kameletbinding-7334fb4e5567aa656c21a323cf47cfb1.json"
+    },
+    "KameletConfiguration" : {
+      "name" : "KameletConfiguration",
+      "description" : "Schema for Kamelet configuration",
+      "version" : "1",
+      "file" : "KameletConfiguration-8a7d32d6fd6a7e9d956eba375087f8f8.json"
+    },
+    "ObjectMeta" : {
+      "name" : "ObjectMeta",
+      "description" : "Kubernetes OpenAPI JSON schema: ObjectMeta",
+      "version" : "v1",
+      "file" : "kubernetes-api-v1-openapi-ObjectMeta-f47bc9eaeb6490c47eefce9681226fee.json"
+    },
+    "ObjectReference" : {
+      "name" : "ObjectReference",
+      "description" : "Kubernetes OpenAPI JSON schema: ObjectReference",
+      "version" : "v1",
+      "file" : "kubernetes-api-v1-openapi-ObjectReference-8d7f63af04e34048d211d34e81fa276b.json"
+    },
+    "Pipe" : {
+      "name" : "Pipe",
+      "description" : "Pipe",
+      "version" : "2.3.1",
+      "file" : "crd-schema-pipe-a3c7c1fce69a636a15ecaaa093128a09.json"
+    },
+    "PipeConfiguration" : {
+      "name" : "PipeConfiguration",
+      "description" : "Schema for Pipe configuration",
+      "version" : "1",
+      "file" : "PipeConfiguration-9a8b1b71bced9e753d144104cb93f005.json"
+    },
+    "PipeErrorHandler" : {
+      "name" : "PipeErrorHandler",
+      "description" : "Camel K Pipe ErrorHandler. See https://camel.apache.org/camel-k/latest/kamelets/kameletbindings-error-handler.html for more details.",
+      "version" : "1",
+      "file" : "PipeErrorHandler-7f81f28bee7d7475bd5466e3f9d2ea44.json"
+    },
+    "beans" : {
+      "name" : "beans",
+      "description" : "Camel YAML DSL JSON schema: beans",
+      "version" : "4.6.0",
+      "file" : "camelYamlDsl-beans-63a46c5ab2bc9dd2f0b68d0c9e96ac7.json"
+    },
+    "camelYamlDsl" : {
+      "name" : "camelYamlDsl",
+      "description" : "Camel YAML DSL JSON schema",
+      "version" : "4.6.0",
+      "file" : "camelYamlDsl-c32e624ea0fdaf5ad92b48711f94890.json"
+    },
+    "errorHandler" : {
+      "name" : "errorHandler",
+      "description" : "Camel YAML DSL JSON schema: errorHandler",
+      "version" : "4.6.0",
+      "file" : "camelYamlDsl-errorHandler-a8ccd493a8d6a0de0d0a76b57a58e19f.json"
+    },
+    "from" : {
+      "name" : "from",
+      "description" : "Camel YAML DSL JSON schema: from",
+      "version" : "4.6.0",
+      "file" : "camelYamlDsl-from-122a194b8e87eeaf9a2fc443c2c184dd.json"
+    },
+    "intercept" : {
+      "name" : "intercept",
+      "description" : "Camel YAML DSL JSON schema: intercept",
+      "version" : "4.6.0",
+      "file" : "camelYamlDsl-intercept-51dcfafff167f749f957e3e7afd7c827.json"
+    },
+    "interceptFrom" : {
+      "name" : "interceptFrom",
+      "description" : "Camel YAML DSL JSON schema: interceptFrom",
+      "version" : "4.6.0",
+      "file" : "camelYamlDsl-interceptFrom-f4127bdcfef6dd3e8bfa37f11932ac04.json"
+    },
+    "interceptSendToEndpoint" : {
+      "name" : "interceptSendToEndpoint",
+      "description" : "Camel YAML DSL JSON schema: interceptSendToEndpoint",
+      "version" : "4.6.0",
+      "file" : "camelYamlDsl-interceptSendToEndpoint-1a354061cea7fe47c27d3a9ffcbb1209.json"
+    },
+    "onCompletion" : {
+      "name" : "onCompletion",
+      "description" : "Camel YAML DSL JSON schema: onCompletion",
+      "version" : "4.6.0",
+      "file" : "camelYamlDsl-onCompletion-33a1be7a24dd0524987f812ff04a0e58.json"
+    },
+    "onException" : {
+      "name" : "onException",
+      "description" : "Camel YAML DSL JSON schema: onException",
+      "version" : "4.6.0",
+      "file" : "camelYamlDsl-onException-b597799d2432c5ebf0659bf94a7a0e59.json"
+    },
+    "rest" : {
+      "name" : "rest",
+      "description" : "Camel YAML DSL JSON schema: rest",
+      "version" : "4.6.0",
+      "file" : "camelYamlDsl-rest-4c08a4d1b429268b57e1e296e30a69d7.json"
+    },
+    "restConfiguration" : {
+      "name" : "restConfiguration",
+      "description" : "Camel YAML DSL JSON schema: restConfiguration",
+      "version" : "4.6.0",
+      "file" : "camelYamlDsl-restConfiguration-e5fbf0430ce5b98aa52ce7781443fc57.json"
+    },
+    "route" : {
+      "name" : "route",
+      "description" : "Camel YAML DSL JSON schema: route",
+      "version" : "4.6.0",
+      "file" : "camelYamlDsl-route-86b2ed38519a48ec19fd94be97a7284.json"
+    },
+    "routeConfiguration" : {
+      "name" : "routeConfiguration",
+      "description" : "Camel YAML DSL JSON schema: routeConfiguration",
+      "version" : "4.6.0",
+      "file" : "camelYamlDsl-routeConfiguration-8479c7d90e53767b7c465f19beaeb159.json"
+    },
+    "routeTemplate" : {
+      "name" : "routeTemplate",
+      "description" : "Camel YAML DSL JSON schema: routeTemplate",
+      "version" : "4.6.0",
+      "file" : "camelYamlDsl-routeTemplate-9fe544c4f4e6580685568582186c5280.json"
+    },
+    "templatedRoute" : {
+      "name" : "templatedRoute",
+      "description" : "Camel YAML DSL JSON schema: templatedRoute",
+      "version" : "4.6.0",
+      "file" : "camelYamlDsl-templatedRoute-311c0abcbffaaf565bb8a4741c443218.json"
+    }
+  }
+}

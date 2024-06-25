@@ -1,0 +1,29 @@
+{
+  "name" : "Kaoto default Catalog",
+  "definitions" : [ {
+    "name" : "Camel Main 4.6.0",
+    "version" : "4.6.0",
+    "runtime" : "Main",
+    "fileName" : "camel-main/4.6.0/index-2b9e6f65f7cdd118f344fcc69e787d9.json"
+  }, {
+    "name" : "Camel Main 4.4.0",
+    "version" : "4.4.0",
+    "runtime" : "Main",
+    "fileName" : "camel-main/4.4.0/index-530788fc7982adbc3bdeb586c06f4ba6.json"
+  }, {
+    "name" : "Camel Main 4.4.0.redhat-00025",
+    "version" : "4.4.0.redhat-00025",
+    "runtime" : "Main",
+    "fileName" : "camel-main/4.4.0.redhat-00025/index-a980f2a8a341a5f2ce904eb923c25cca.json"
+  }, {
+    "name" : "Camel Quarkus 3.8.0",
+    "version" : "3.8.0",
+    "runtime" : "Quarkus",
+    "fileName" : "camel-quarkus/3.8.0/index-6d4cbb64d996fe2a7fdf42de6941a5a3.json"
+  }, {
+    "name" : "Camel SpringBoot 4.6.0",
+    "version" : "4.6.0",
+    "runtime" : "SpringBoot",
+    "fileName" : "camel-springboot/4.6.0/index-367f881d76950c988a84b58b3bffde5.json"
+  } ]
+}
